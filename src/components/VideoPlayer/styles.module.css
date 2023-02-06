@@ -1,0 +1,31 @@
+video {
+    width: 100vw;
+}
+
+.player {
+    width: 52px;
+    height: 52px;
+    background-image: url('../../assets/Images/playerIcon.png');
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    outline: none;
+    border: none;
+
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.hide {
+    opacity: 0;
+}

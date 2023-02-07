@@ -1,15 +1,15 @@
 import React, { useRef, useState } from 'react'
 import styles from './styles.module.css'
 
-import video_src from '../../assets/Videos/1.mp4'
 
+type VideoProps = {
+    key: number;
+    video_src: string;
+}
 
-
-function VideoPlayer() {
-
+function VideoPlayer({ video_src }: VideoProps) {
     const [playing, setPlaying] = useState(true)
     const video = useRef<HTMLVideoElement>(null);
-
 
     const handlePlay = () => {
         if (!video.current) {
@@ -25,7 +25,7 @@ function VideoPlayer() {
     
 
     return (
-        <div>
+        <div className={styles.wrapper}>
             <video
                 className={styles.video}
                 loop
